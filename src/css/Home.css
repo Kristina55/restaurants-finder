@@ -1,0 +1,29 @@
+.homepage-text {
+  color: white;
+  position: relative;
+  z-index: 2;
+  padding: 35px;
+  text-align: center;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.homepage-text-background > h1 {
+  font-size: 80px;
+  font-family: "Khand", sans-serif;
+  margin-bottom: 0px;
+}
+.homepage-text-background > p {
+  font-size: 35px;
+  font-family: "Lobster", cursive;
+  margin-top: 5px;
+}
+
+.homepage-text-background {
+  background-color: #00000094;
+}
+
+/* .search-input {
+
+} */
