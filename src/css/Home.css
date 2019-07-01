@@ -24,6 +24,27 @@
   background-color: #00000094;
 }
 
-/* .search-input {
+.input-group {
+  display: flex;
+  justify-content: center;
+}
 
-} */
+.homepage-input {
+  font-family: "Khand", sans-serif;
+  border-color: white;
+  margin-right: 8px;
+  width: 265px;
+  margin-top: 22px;
+  height: 50px;
+  border-radius: 9px;
+  border: none;
+  font-size: 20px;
+  padding-left: 7px;
+}
+
+#homepage-button {
+  font-family: "Khand", sans-serif;
+  height: 50px;
+  font-size: 22px;
+  margin-top: 22px;
+}
