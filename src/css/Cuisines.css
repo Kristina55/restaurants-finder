@@ -1,0 +1,59 @@
+.not-found-background {
+  background-image: url(../images/pizza.jpg);
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+}
+
+.cuisines-text {
+  color: white;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 100px;
+  font-family: "Lobster", cursive;
+}
+
+.cuisines-text > h1 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 80px;
+  font-family: "Lobster", cursive;
+}
+
+.cuisine-header {
+  text-align: center;
+  background-image: url(../images/smaller-half.jpg);
+  height: 100vh;
+  background-size: cover;
+}
+
+.cuisine-collection {
+  background-color: #eaeaea;
+  margin-top: 60px;
+}
+
+.cuisine-text {
+  color: white;
+  position: relative;
+  z-index: 2;
+  padding: 35px;
+  text-align: center;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cuisine-text-background {
+  background-color: #00000094;
+}
+
+.cuisine-text-background > h1 {
+  font-size: 80px;
+  font-family: "Khand", sans-serif;
+  margin-bottom: 0px;
+}

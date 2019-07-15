@@ -71,11 +71,14 @@ class Restaurants extends Component {
     ));
     return (
       <div>
-        <div className="restaurants-header ">
+        <div id="restaurants-header-section" className="restaurants-header">
           <div className="homepage-text">
             <div className="homepage-text-background">
               <h1>EXPLORE</h1>
-              <p>Find your favorite food destination</p>
+              <p>Find your favorite cuisine</p>
+              <p id="cuisines-count">
+                Italian, Indian, Thai, Asian, Chinese, American, Mexican...
+              </p>
               <form>
                 <div className="input-group mb-3">
                   <input
@@ -87,12 +90,17 @@ class Restaurants extends Component {
                     aria-describedby="button-addon2"
                     ref={input => (this.search = input)}
                     onChange={this.handleInputChange}
+                    value={this.state.query}
                   />
+
                   <div>
                     <Link
                       to={{
                         pathname: "/cuisines",
-                        state: { cuisines: this.state.cuisines }
+                        state: {
+                          cuisines: this.state.cuisines,
+                          query: this.state.query
+                        }
                       }}
                     >
                       <button

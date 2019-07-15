@@ -5,7 +5,7 @@ class Card extends Component {
   render() {
     return (
       <div className="col-sm-4">
-        <Link to={`/restaurants/${this.props.id}`}>
+        <a href={`/restaurants/${this.props.id}/#restaurants-header-section`}>
           <div
             className="card"
             style={{
@@ -17,7 +17,7 @@ class Card extends Component {
             <h5 className="card-title">{this.props.title}</h5>
             <h6 className="card-description">{this.props.description}</h6>
           </div>
-        </Link>
+        </a>
       </div>
     );
   }
