@@ -43,37 +43,16 @@ class App extends Component {
           path="/restaurants/:id"
           render={props => <Restaurants {...props} />}
         />
-        {/* <Route
+        <Route
           exact
           path="/cuisines"
           render={props => (
             <Cuisines {...props} restaurants={this.state.restaurants} />
           )}
-        /> */}
+        />
       </BrowserRouter>
     );
   }
 }
 
 export default App;
-
-// async componentDidMount() {
-//   let response = await axios({
-//     method: "get",
-//     url: "https://developers.zomato.com/api/v2.1/collections?city_id=306",
-//     headers: { "user-key": "b26f02984b714751b6c2f50247e4b9a8" }
-//   });
-
-//   this.setState({ collections: response.data.collections });
-// }
-
-// async getRestaurants() {
-//   let response = await axios({
-//     method: "get",
-//     url: "https://developers.zomato.com/api/v2.1/search?city_id=306",
-//     headers: { "user-key": "b26f02984b714751b6c2f50247e4b9a8" }
-//   });
-
-//   this.setState({ restaurants: response.data.restaurants });
-//   console.log(response.data.restaurants);
-// }

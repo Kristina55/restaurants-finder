@@ -89,21 +89,20 @@ class Restaurants extends Component {
                     onChange={this.handleInputChange}
                   />
                   <div>
-                    {/* <Link
+                    <Link
                       to={{
                         pathname: "/cuisines",
                         state: { cuisines: this.state.cuisines }
                       }}
-                    > */}
-                    <button
-                      onClick={this.handleInputChange}
-                      className="btn btn-danger"
-                      type="button"
-                      id="homepage-button"
                     >
-                      Search
-                    </button>
-                    {/* </Link> */}
+                      <button
+                        className="btn btn-danger"
+                        type="button"
+                        id="homepage-button"
+                      >
+                        Search
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </form>
