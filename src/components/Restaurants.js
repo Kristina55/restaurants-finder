@@ -34,18 +34,17 @@ class Restaurants extends Component {
     this.setState({
       cuisines: cuisineResponse.data.restaurants
     });
-    // this.props.getCuisines(
-    //   cuisineResponse.data.restaurants.map(one => one.restaurant.cuisines)
-    // );
-    //    console.log(
-    //    cuisineResponse.data.restaurants.map(one => one.restaurant.cuisines)
-    // );
   }
 
-  handleInputChange = () => {
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log(this.state);
+  };
+
+  handleInputChange = e => {
     this.setState(
       {
-        query: this.search.value
+        [e.target.name]: e.target.value
       },
       () => {
         if (this.state.query && this.state.query.length > 1) {
@@ -56,9 +55,7 @@ class Restaurants extends Component {
       }
     );
   };
-
   render() {
-    console.log(this.state.cuisines);
     const restaurantsCollection = this.state.restaurants.map(one => (
       <Restaurant
         name={one.restaurant.name}
@@ -79,7 +76,7 @@ class Restaurants extends Component {
               <p id="cuisines-count">
                 Italian, Indian, Thai, Asian, Chinese, American, Mexican...
               </p>
-              <form>
+              <form onSubmit={this.handleSubmit}>
                 <div className="input-group mb-3">
                   <input
                     type="text"
@@ -88,9 +85,7 @@ class Restaurants extends Component {
                     placeholder="Search for wanted cuisine..."
                     aria-label="Recipient's username"
                     aria-describedby="button-addon2"
-                    ref={input => (this.search = input)}
                     onChange={this.handleInputChange}
-                    value={this.state.query}
                   />
 
                   <div>

@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 
 class Cuisine extends Component {
-  static defaultProps = {};
-
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div className="col-sm-4">
@@ -19,7 +12,6 @@ class Cuisine extends Component {
               backgroundSize: "cover"
             }}
           />
-
           <div className="card-body">
             <h5 className="card-title">{this.props.name}</h5>
             <h6 className="card-description">{this.props.location}</h6>
