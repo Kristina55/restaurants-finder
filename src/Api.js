@@ -9,8 +9,6 @@ export async function fetchCollections() {
       "content-type": "application/json"
     }
   });
-  console.log("RESPONSE", response);
-
   return response.data.collections;
 }
 
@@ -22,4 +20,14 @@ export async function fetchRestaurants() {
   });
 
   return response.data.restaurants;
+}
+
+export async function getCuisinesApi(query) {
+  let cuisineResponse = await axios({
+    method: "get",
+    url: `https://developers.zomato.com/api/v2.1/search?entity_id=306&q=${query}`,
+    headers: { "user-key": "b26f02984b714751b6c2f50247e4b9a8" }
+  });
+
+  return cuisineResponse.data.restaurants;
 }

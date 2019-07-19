@@ -3,6 +3,7 @@ import axios from "axios";
 import Restaurant from "./Restaurant";
 import "../css/Restaurants.css";
 import { Link } from "react-router-dom";
+import { getCuisinesApi } from "../Api";
 
 class Restaurants extends Component {
   constructor(props) {
@@ -22,18 +23,9 @@ class Restaurants extends Component {
     this.setState({ restaurants: response.data.restaurants });
   }
 
-  //Connect the API with the search term (API needs ID and search term is word)
   async getCuisines() {
-    let cuisineResponse = await axios({
-      method: "get",
-      url: `https://developers.zomato.com/api/v2.1/search?entity_id=306&q=${
-        this.state.query
-      }`,
-      headers: { "user-key": "b26f02984b714751b6c2f50247e4b9a8" }
-    });
-    this.setState({
-      cuisines: cuisineResponse.data.restaurants
-    });
+    let data = await getCuisinesApi(this.state.query);
+    this.props.getCuisinesData(data);
   }
 
   handleSubmit = e => {
@@ -86,6 +78,7 @@ class Restaurants extends Component {
                     aria-label="Recipient's username"
                     aria-describedby="button-addon2"
                     onChange={this.handleInputChange}
+                    value={this.state.query}
                   />
 
                   <div>
@@ -93,7 +86,6 @@ class Restaurants extends Component {
                       to={{
                         pathname: "/cuisines",
                         state: {
-                          cuisines: this.state.cuisines,
                           query: this.state.query
                         }
                       }}

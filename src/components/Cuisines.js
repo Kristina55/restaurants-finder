@@ -1,17 +1,13 @@
 import React, { Component } from "react";
 import Cuisine from "./Cuisine";
 import "../css/Cuisines.css";
+
 class Cuisines extends Component {
-  static defaultProps = {};
-
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
+  static defaultProps = {
+    cuisines: []
+  };
   render() {
-    console.log(this.props.location.state.query);
-    const cuisines = this.props.location.state.cuisines.map(one => (
+    const cuisines = this.props.cuisines.map(one => (
       <Cuisine
         name={one.restaurant.name}
         image={one.restaurant.featured_image}
@@ -21,7 +17,7 @@ class Cuisines extends Component {
         url={one.restaurant.url}
       />
     ));
-    if (this.props.location.state.cuisines.length > 0) {
+    if (this.props.cuisines.length > 0) {
       return (
         <div className="cuisine-header">
           <div className="cuisine-text">

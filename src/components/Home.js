@@ -3,11 +3,9 @@ import "../css/Home.css";
 import Card from "./Card";
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
+  static defaultProps = {
+    collections: []
+  };
   render() {
     const cardCollection = this.props.collections.map(card => (
       <Card
