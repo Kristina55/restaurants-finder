@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/restaurants-finder/static/css/main.c5565319.chunk.css",
+    "main.js": "/restaurants-finder/static/js/main.4f4307b2.chunk.js",
+    "main.js.map": "/restaurants-finder/static/js/main.4f4307b2.chunk.js.map",
+    "runtime~main.js": "/restaurants-finder/static/js/runtime~main.0779a698.js",
+    "runtime~main.js.map": "/restaurants-finder/static/js/runtime~main.0779a698.js.map",
+    "static/js/2.125ee2d8.chunk.js": "/restaurants-finder/static/js/2.125ee2d8.chunk.js",
+    "static/js/2.125ee2d8.chunk.js.map": "/restaurants-finder/static/js/2.125ee2d8.chunk.js.map",
+    "index.html": "/restaurants-finder/index.html",
+    "precache-manifest.6bc8a89dada174eafdc74996fde3faf5.js": "/restaurants-finder/precache-manifest.6bc8a89dada174eafdc74996fde3faf5.js",
+    "service-worker.js": "/restaurants-finder/service-worker.js",
+    "static/css/main.c5565319.chunk.css.map": "/restaurants-finder/static/css/main.c5565319.chunk.css.map",
+    "static/media/Home.css": "/restaurants-finder/static/media/pasta.2f7c3a7d.jpg",
+    "static/media/Cuisines.css": "/restaurants-finder/static/media/smaller-half.8b441d16.jpg",
+    "static/media/Restaurants.css": "/restaurants-finder/static/media/spaghetti.6187d757.jpg"
+  }
+}
